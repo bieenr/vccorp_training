@@ -1,0 +1,11 @@
+services:
+  fastapi:
+    container_name: fastapi
+    image: fastapi_basic:latest
+    build:
+      context: .
+      #  Volumes để nối từ file trong thư mục hiện tại vào  file thư mục trong container
+    volumes:
+      - ./tuan1/bai2_fastapi.py:/tuan1/bai2_fastapi.py
+    ports:
+      - "542:8000"
